@@ -1,7 +1,15 @@
 import 'package:chat_app_fire_base/screens/auth.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+// Follow instructions here for Firebase: https://firebase.google.com/docs/flutter/setup
 
-void main() {
+void main() async {
+
+  await Firebase.initializeApp(
+  options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const App());
 }
 
